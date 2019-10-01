@@ -1,6 +1,470 @@
-<head>
-  <title>brats preprocessor user guide</title>
-</head>
-<body>
-  <p>We are updating the website at the moment. Please come back soon.</p>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>BraTS preprocessor user guide</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom fonts for this template -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
+      rel="stylesheet"
+    />
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet" />
+
+    <!--icon-->
+    <link rel="shortcut icon" href="/img/icon.ico" />
+  </head>
+
+  <body id="page-top">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+      id="sideNav"
+    >
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-lg-none">
+          <img
+            class="img-fluid mx-auto mb-0"
+            id="mobilelogo"
+            src="img/logo.png"
+            alt=""
+          />
+        </span>
+
+        <span class="text-primary d-lg-none">BraTS preprocessor</span>
+        <span class="d-lg-none">guide</span>
+
+        <span class="d-none d-lg-block">
+          <img
+            class="img-fluid mx-auto mb-2"
+            id="logo"
+            src="img/logo.png"
+            alt=""
+          />
+        </span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#gettingstarted"
+              >getting started</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#dockerinstallation"
+              >docker installation</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#dockerconfiguration"
+              >docker configuration</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#download">download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#firststeps"
+              >first steps</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#testcase"
+              >the test case</a
+            >
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#faq">FAQ</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="imprint.html"
+              >imprint</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+      <section
+        class="resume-section p-3 p-lg-5 d-flex align-items-center"
+        id="gettingstarted"
+      >
+        <div id="titlepage">
+          <div class="w-100">
+            <!-- <img
+              class="img-fluid w-25"
+              src="img/logo.png"
+              alt=""
+              id="welcomelogo"
+            /> -->
+            <h1 class="mb-3 mt-3">
+              BraTS preprocessor <span class="text-primary">user guide</span>
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <hr class="m-0" />
+
+      <section
+        class="resume-section p-3 p-lg-5 d-flex align-items-center"
+        id="dockerinstallation"
+      >
+        <div class="my-auto">
+          <h2 class="mb-0">Welcome</h2>
+          <p>
+            Welcome this guide is meant to help you processing your first
+            dataset. As Docker is the backbone of our application it is
+            necessary to first install and configure Docker. If you have Docker
+            already installed please directly proceed to the
+            <a href="#dockerconfiguration"> Docker Configuration</a> section.
+          </p>
+
+          <h2 class="mb-4 mt-5">docker installation</h2>
+          <h3>General</h3>
+          <p>
+            The
+            <a href="https://docs.docker.com/install/" target="_blank"
+              >docker documentation</a
+            >
+            provides up to date and comprehensive instructions on installing
+            docker, the following remarks are meant in addition to it to help
+            you troubleshooting the installation. The free community edition
+            (CE) version of docker is sufficient for our purposes.
+          </p>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3>Linux</h3>
+              <p>
+                On Ubuntu 1604 and 1804 the installation via the
+                <a
+                  href="https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-convenience-script"
+                  target="_blank"
+                  >convenience script</a
+                >
+                proved to be fast and efficient. We expect this to also work on
+                other Linux distributions.
+              </p>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">MAC OSX</h3>
+              <p>
+                Download and install Docker Desktop for Mac via the
+                <a
+                  href="https://store.docker.com/editions/community/docker-ce-desktop-mac"
+                  target="_blank"
+                  >installer</a
+                >.
+              </p>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Microsoft Windows</h3>
+              <p>
+                Download and install the latest version of
+                <a
+                  href="https://docs.docker.com/docker-for-windows/install/"
+                  target="_blank"
+                  >Docker Desktop for Windows</a
+                >.
+              </p>
+              <p>
+                If you do not meet the minimum requirements for Docker Desktop,
+                docker can be installed inside a virtual machine via
+                <a
+                  href="https://docs.docker.com/toolbox/toolbox_install_windows/"
+                  target="_blank"
+                  >Docker Toolbox</a
+                >. Support for docker toolbox is still work in progress so we
+                strongly recommend opting for Docker Desktop.
+              </p>
+
+              <!--                    https://www.virtualbox.org/manual/ch06.html#natforward
+  https://medium.com/@Charles_Stover/fixing-volumes-in-docker-toolbox-4ad5ace0e572
+  https://stackoverflow.com/questions/42866013/docker-toolbox-localhost-not-working/42886035
+  
+  docker-machine create -d virtualbox --virtualbox-cpu-count=2 --virtualbox-memory=6144 --virtualbox-disk-size=80000 default
+  -->
+
+              <p>
+                Hyper-V related problems might be solved by following the
+                solutions provided in
+                <a
+                  href="https://stackoverflow.com/a/39989990/3485363"
+                  target="_blank"
+                  >this stackoverflow</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="resume-section p-3 p-lg-5 d-flex align-items-center"
+        id="dockerconfiguration"
+      >
+        <div class="my-auto">
+          <h2 class="mb-5">Docker Configuration</h2>
+
+          <h3>General</h3>
+          <p>
+            After installing and running the Docker daemon we recommend you to
+            create a free Docker Store account
+            <a
+              href="https://store.docker.com/signup?next=%2Feditions%2Fcommunity%2Fdocker-ce-desktop-mac%3Fref%3Dlogin"
+              target="_blank"
+              >here</a
+            >. Use the created account to login with your Docker Daemon. To
+            login use your account name and <u>not</u> your email adress.
+          </p>
+
+          <p>
+            If you are not running Linux you also need to adjust the system
+            ressources available to docker. When doing this you should allocate
+            atleast 6GB RAM. Increasing the amount of RAM and CPU cores
+            available to docker will speed up the computations as the code is
+            parallelized.
+          </p>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3>Linux</h3>
+              <p>Despite of the login no specific actions are required.</p>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">MAC OSX</h3>
+              <p>
+                You can find the corresponding settings here:
+                <img src="img/res_osx.png" class="w-75 mt-1" />
+              </p>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">MS Windows</h3>
+              <p>
+                You can find the corresponding settings here:
+                <img src="img/res_win.png" class="w-75 mt-1" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="resume-section p-3 p-lg-5 d-flex align-items-center"
+        id="download"
+      >
+        <div class="my-auto">
+          <h2 class="mb-5">download</h2>
+
+          <p>
+            Download the client for your operating system from one of the
+            corresponding links below:
+          </p>
+          <h4>Linux</h4>
+          <p>
+            <a href="downloads/brats_preprocessor-linux-x64.zip"
+              >download .zip archive</a
+            >
+          </p>
+          <h4>Mac OSX</h4>
+          <p>
+            <a href="downloads/brats_preprocessor-darwin-x64.zip"
+              >download .zip archive</a
+            >
+          </p>
+
+          <h4>MS Windows</h4>
+          <p>
+            <a href="downloads/brats_preprocessor-win32-x64.zip"
+              >download .zip archive</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="resume-section p-3 p-lg-5 d-flex align-items-center"
+        id="firststeps"
+      >
+        <div class="my-auto">
+          <h2 class="mb-5">first steps</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3>starting the program</h3>
+              <p>
+                After the download extract the archive's contents to a folder of
+                your choice. Then..
+              </p>
+              <h4>Linux</h4>
+              <p>
+                Linux users should execute the program as sudo. Open a terminal,
+                navigate to the extracted folder and type:
+              </p>
+              <p><b>sudo ./ brats_preprocessor</b></p>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h4 class="mb-0">MAC OSX</h4>
+              <p>
+                In finder navigate to the extracted folder and doubleclick on
+                brats_preprocessor.app to open the application.
+              </p>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h4 class="mb-0">MS Windows</h4>
+              <p>
+                In Windows explorer navigate to the extracted folder and
+                doubleclick on brats_preprocessor.exe to open the application.
+              </p>
+            </div>
+          </div>
+
+          <h3>Updating the docker backend</h3>
+          <p>
+            When the program has finished loading, you will see the following
+            screen:
+          </p>
+          <img src="img/update.png" class="w-75" />
+          <p>
+            Make sure you have a working internet connection and click on the
+            elephant logo. This will download the most recent version of the
+            backend from docker hub. Depending on your internet connection this
+            process might take a while as several gigabytes have to be
+            downloaded. When the process is finished you will be redirected to
+            the next screen..
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="resume-section p-3 p-lg-5 d-flex align-items-center"
+        id="testcase"
+      >
+        <div class="my-auto">
+          <h2 class="mb-5">the test case</h2>
+
+          <p>
+            Now it is time to verify whether the program works correctly. Before
+            running it with your own data we recommend trying the test dataset
+            once. Therefore please download the testdata from
+            <a href="downloads/example_data.zip">here</a> and extract it to the
+            location where you want to process your data.
+          </p>
+
+          <h3>Coniguration</h3>
+          <p>
+            Now select the country where your institution is located and choose
+            two identifying letters. In this example we selected DE for Germany
+            and R + I for the Rechts der Isar hospital:
+          </p>
+          <img src="img/identification.png" class="w-50" />
+
+          <p>
+            Next you need to map the four folders (dicom import, nifti export,
+            exam import, export) to the corresponding folders from the test
+            archive. Click on the white boxes below the respective folders and
+            navigate to the desired path. When you finished doing this for all
+            four folders click on the docker run button at the top of the page.
+            The startup of the docker container will take a couple of seconds
+            and you will be redirected to the next screen. From there follow the
+            instructions within the application to process the images.
+          </p>
+
+          <h3>Processing your own data</h3>
+          <p>
+            Processing your own data works analogue to the test case. Use the
+            same folder structure like in the test case and map the four
+            folders. Then press the <b>docker run</b> button to get going.
+          </p>
+        </div>
+      </section>
+
+      <!-- <section
+        class="resume-section p-3 p-lg-5 d-flex align-items-center"
+        id="faq"
+      >
+        <div class="my-auto">
+          <h2 class="mb-5">FAQ</h2>
+
+          <p>tbd</p>
+        </div>
+      </section> -->
+
+      <section
+        class="resume-section p-3 p-lg-5 d-flex align-items-center"
+        id="contact"
+      >
+        <div class="my-auto">
+          <h2 class="mb-5">contact</h2>
+
+          <p>
+            Concerning questions, feedback etc. please contact
+            <a href="mailto:florian.kofler  {{ [[at]] }} tum.de"
+              >Florian Kofler</a
+            >
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+  </body>
+</html>
